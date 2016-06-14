@@ -1,0 +1,11 @@
+<h1>Guests#index</h1>
+<%@users.each do |g| %>
+<%= g.fname %>
+<br>
+<%= g.email %>
+<br>
+<%= g.extra_guest %>
+<br>
+<%= g.dietary_needs %>
+<br>
+<%end%>

@@ -1,0 +1,17 @@
+<h1>Items#new</h1>
+
+<%= form_for @item do |p| %>
+	<%=p.label "Title" %>
+	<%=p.text_field :title %>
+	<br>
+	<%=p.label "description" %>
+	<%=p.text_field :description %>
+	<br>
+	<%=p.label "price" %>
+	<%=p.text_field :price%>
+	<br>
+	<%=p.label "type" %>
+	<%=p.select(:item2_type, options_for_select([['Decorations','Decorations'],['Food','Food'],['Entertainment','Entertainment']])) %>
+
+<%=p.submit :create%>
+<%end %>

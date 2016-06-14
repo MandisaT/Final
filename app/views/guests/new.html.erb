@@ -1,0 +1,32 @@
+<h1>Guests#new</h1>
+
+
+<%= form_for @guest do |g| %>
+	<%=g.label "first name" %>
+	<br>
+	<%=g.text_field :fname %>
+	<br>
+	<%=g.label "last name" %>
+	<br>
+	<%=g.text_field :lname %>
+	<br>
+	<br>
+	<%=g.label "email" %>
+	<br>
+	<%=g.text_field :email%>
+	<br>
+	<%=g.label "Extra Guest" %>
+	<br>
+	<%=g.text_field :extra_guest %>
+	<br>
+	<%=g.label "Awesome food needs" %>
+	<br>
+	<%=g.text_field :dietary_needs %>
+	<br>
+	<!-- 
+	when you hit the submit buttone your sending params  -->
+	<%=g.submit%>
+	<br>
+<%end%>
+
+

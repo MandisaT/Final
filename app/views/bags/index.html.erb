@@ -1,0 +1,18 @@
+<h1>Party Bag</h1>
+<%= link_to 'Empty your bag' , bag_clear_path %>
+<%total = 0 %>
+<ul>
+<% @bag.each do | id, quantity| %>
+<% item = Item.find_by_id(id) %>
+<li>
+	<%= link_to item.title ,item %>
+	<br>
+	<%= item.description %>
+	<br>
+	<%= number_to_currency(item.price, :unit =>'$') %>
+	 Quantity: <%= quantity %>
+	<% total += quantity * item.price %>
+</li>
+<%end %>
+<h1>Total:<%= number_to_currency(total, :unit =>'$') %>
+</ul>
